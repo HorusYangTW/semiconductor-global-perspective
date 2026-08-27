@@ -1,5 +1,5 @@
 # Semiconductor Industry Global View
-
+https://horusyangtw.github.io/semiconductor-global-perspective/
 GitHub Pages static course portal.
 
 - `index.html`: homepage
