@@ -1,14 +1,94 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><meta name="description" content="115-1 半導體產業全球視野"><title>書單目錄｜Reading List</title><style>
-:root{--page-width:900px;--bg:#eef0f3;--surface:rgba(255,255,255,.97);--text:#17191c;--muted:#666d75;--line:#d9dde3;--accent:#20242a;--shadow:0 3px 16px rgba(15,23,42,.11)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif}.topbar{position:sticky;top:0;z-index:100;background:var(--surface);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topbar-inner{max-width:1180px;min-height:60px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;gap:12px}.brand{min-width:0;margin-right:auto}.brand strong{display:block;font-size:15px;line-height:1.3}.brand span{display:block;margin-top:2px;font-size:12px;color:var(--muted)}.actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}button,.btn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);text-decoration:none;border-radius:8px;min-height:36px;padding:7px 10px;font:inherit;font-size:13px;cursor:pointer}button:hover,.btn:hover{border-color:#aeb4bc;background:#f8f9fa}.chapterbar{border-top:1px solid #edf0f2;overflow-x:auto;scrollbar-width:thin}.chapterbar-inner{max-width:1180px;margin:0 auto;padding:8px 18px;display:flex;gap:7px;width:max-content;min-width:100%}.chapterbar a{white-space:nowrap;text-decoration:none;color:#30343a;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:12px}.reader-intro{max-width:900px;margin:24px auto 16px;padding:0 18px;text-align:center}.reader-intro h1{margin:0;font-size:24px;letter-spacing:.01em}.reader-intro p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.7}.pages{width:100%;overflow-x:auto;padding:0 14px 80px}.page{width:var(--page-width);max-width:calc(100vw - 28px);margin:18px auto;position:relative}.page img{display:block;width:100%;height:auto;background:white;box-shadow:var(--shadow);border:1px solid #dfe3e8}.page-number{text-align:center;font-size:11px;color:#7a8088;margin-top:7px}.progress{height:2px;background:transparent;position:absolute;left:0;right:0;bottom:-1px}.progress>div{height:100%;background:#555d67;width:0}.floating{position:fixed;right:18px;bottom:18px;z-index:80;display:grid;gap:7px}.floating a{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.96);border:1px solid var(--line);color:#222;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.08);font-size:18px}
-@media(max-width:700px){.topbar-inner{align-items:flex-start;padding:8px 10px}.brand span{display:none}.actions{gap:5px}button,.btn{min-height:34px;padding:6px 8px;font-size:12px}.chapterbar-inner{padding:7px 10px}.reader-intro{margin-top:18px;padding:0 14px}.reader-intro h1{font-size:20px}.pages{padding-left:8px;padding-right:8px}.page{max-width:calc(100vw - 16px);margin:10px auto 16px}.floating{right:10px;bottom:10px}}
-@media print{.topbar,.reader-intro,.floating,.page-number{display:none!important}body,.pages{background:#fff;padding:0}.page{width:100%;max-width:none;margin:0;page-break-after:always}.page img{box-shadow:none;border:0}}
-</style></head><body id="top"><header class="topbar"><div class="topbar-inner"><div class="brand"><strong>書單目錄｜Reading List</strong><span>原始教材第 1–3 頁</span></div><div class="actions"><a class="btn" href="./index.html">← 主頁</a><button type="button" id="zoom-out" aria-label="縮小">−</button><button type="button" id="fit" aria-label="符合視窗">Fit</button><button type="button" id="zoom-in" aria-label="放大">＋</button></div></div><div class="progress"><div id="progress"></div></div></header><section class="reader-intro"><h1>書單目錄｜Reading List</h1><p>本頁只保留原教材的書單與延伸閱讀內容，已從整合版中獨立拆出。</p></section><main class="pages"><article class="page" id="page-01"><img src="assets/booklist/page-01.webp" alt="書單目錄｜Reading List 原稿第 1 頁" loading="eager" decoding="async"><div class="page-number">原稿第 1 頁 · 1 / 3</div></article><article class="page" id="page-02"><img src="assets/booklist/page-02.webp" alt="書單目錄｜Reading List 原稿第 2 頁" loading="eager" decoding="async"><div class="page-number">原稿第 2 頁 · 2 / 3</div></article><article class="page" id="page-03"><img src="assets/booklist/page-03.webp" alt="書單目錄｜Reading List 原稿第 3 頁" loading="lazy" decoding="async"><div class="page-number">原稿第 3 頁 · 3 / 3</div></article></main><div class="floating"><a href="#top" title="回到頁首">↑</a></div><script>
-const root=document.documentElement;let width=900;
-const setWidth=v=>{width=Math.max(520,Math.min(1500,v));root.style.setProperty('--page-width',width+'px')};
-document.getElementById('zoom-in').onclick=()=>setWidth(width+100);
-document.getElementById('zoom-out').onclick=()=>setWidth(width-100);
-document.getElementById('fit').onclick=()=>{width=Math.max(320,Math.min(900,window.innerWidth-28));root.style.setProperty('--page-width',width+'px')};
-const prog=document.getElementById('progress');addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;prog.style.width=(max>0?scrollY/max*100:0)+'%'});
-if(innerWidth<930)document.getElementById('fit').click();
-</script></body></html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="115-1 半導體產業全球視野｜Semiconductor Industry · Global Perspective">
+<link rel="preconnect" href="https://upload.wikimedia.org"><title>書單與延伸閱讀｜Reading List</title><style>:root{--ink:#18202a;--muted:#667085;--line:#e4e7ec;--paper:#fff;--soft:#f7f8fa;--navy:#10283f;--accent:#9b5b35;--link:#184c7a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}.topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topbar-inner{width:min(1180px,calc(100% - 32px));min-height:58px;margin:auto;display:flex;align-items:center;gap:18px}.brand{margin-right:auto;min-width:0}.brand strong{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand span{display:block;color:#98a2b3;font-size:11px;margin-top:2px;letter-spacing:.04em}.nav-actions{display:flex;align-items:center;gap:7px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);text-decoration:none;font-size:12px;font-weight:650}.btn:hover{background:var(--soft);border-color:#cbd1d8}.progress-track{height:2px;background:transparent}.progress-bar{height:100%;width:0;background:var(--accent)}.hero{width:min(960px,calc(100% - 36px));margin:0 auto;padding:64px 0 34px}.eyebrow{font-size:12px;font-weight:750;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}.hero h1{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-.025em;margin:0}.hero .en{margin-top:9px;color:var(--navy);font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.hero p{max-width:760px;margin:20px 0 0;color:#525c69;font-size:16px;line-height:1.75}.reader-note{display:inline-flex;gap:8px;align-items:center;margin-top:20px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:var(--soft);color:#667085;font-size:12px}.reader-note strong{color:#344054}.footer{width:min(960px,calc(100% - 36px));margin:80px auto 0;border-top:1px solid var(--line);padding:24px 0 42px;color:#98a2b3;font-size:11px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.to-top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 5px 18px rgba(16,24,40,.09);color:var(--ink);text-decoration:none}@media(max-width:700px){.topbar-inner{width:min(100% - 20px,1180px)}.brand span{display:none}.hero{padding:42px 0 24px}.reader-note{border-radius:10px;line-height:1.45}.footer{margin-top:52px}.to-top{right:10px;bottom:10px}}
+.reading-list{width:min(960px,calc(100% - 36px));margin:6px auto 0;display:grid;gap:12px}.reading-card{display:grid;grid-template-columns:86px minmax(0,1.5fr) minmax(260px,.9fr);gap:22px;align-items:start;padding:23px 24px;border:1px solid var(--line);border-radius:15px;background:#fff;transition:.18s border-color,.18s box-shadow,.18s transform}.reading-card:hover{border-color:#cbd1d8;box-shadow:0 10px 26px rgba(16,24,40,.06);transform:translateY(-1px)}.reading-card.extension{background:#fbfbfc}.reading-index{display:flex;flex-direction:column;gap:5px}.reading-index span{font-family:Georgia,serif;font-size:24px;color:#344054}.reading-index small{font-size:9px;color:#98a2b3;letter-spacing:.12em;text-transform:uppercase}.reading-source{font-size:14px;line-height:1.7;color:#2f3742;overflow-wrap:anywhere}.reading-source strong{font-weight:650}.reading-source p{margin:0 0 8px}.reading-source p:last-child{margin-bottom:0}.reading-note{font-size:13px;line-height:1.68;color:#667085;border-left:1px solid var(--line);padding-left:20px}.reading-note p{margin:0 0 6px}.reading-note ul{margin:6px 0 0;padding-left:18px}.reading-note li{margin:3px 0}.reading-card a{font-weight:600;overflow-wrap:anywhere}.reading-card a.source-link{display:inline-flex;align-items:center;margin-top:9px;padding:6px 9px;border:1px solid #d7dce2;border-radius:8px;background:#fff;color:#184c7a;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;font-size:12px}.reading-card a.source-link:hover{background:#f7f8fa;border-color:#bfc6ce}@media(max-width:850px){.reading-card{grid-template-columns:64px 1fr}.reading-note{grid-column:2;border-left:0;border-top:1px solid var(--line);padding:14px 0 0}}@media(max-width:560px){.reading-card{grid-template-columns:1fr;padding:18px}.reading-index{flex-direction:row;align-items:baseline}.reading-note{grid-column:1}.reading-source{font-size:14px}}</style></head><body id="top">
+<header class="topbar"><div class="topbar-inner"><div class="brand"><strong>書單與延伸閱讀｜Reading List</strong><span>Semiconductor Industry · Global Perspective</span></div><div class="nav-actions"><a class="btn" href="./index.html">← 主頁</a><a class="btn" href="./integrated.html">完整教材 →</a></div></div><div class="progress-track"><div class="progress-bar" id="progress"></div></div></header>
+<section class="hero"><div class="eyebrow">Course Reading Portal · 01</div><h1>書單與延伸閱讀</h1><div class="en">Reading List</div><p>核心書目、產業報告與延伸材料集中整理。所有網址都可直接開啟，文字可搜尋、選取與複製，適合課前預習與研究延伸。</p><div class="reader-note"><strong>閱讀提示</strong><span>Ctrl / ⌘ + F 搜尋關鍵字 · 點擊來源直接開啟原文</span></div></section>
+<main class="reading-list"><article class="reading-card core">
+      <div class="reading-index"><span>01</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>McKinsey &amp; Company. (2025, April 14). <em>What is a semiconductor?</em></strong> <a class="source-link" href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-semiconductor" rel="noopener noreferrer" target="_blank" title="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-semiconductor">開啟原文 ↗</a></div>
+      <div class="reading-note"><p>半導體基本概念</p> <ul> <li><p>semiconductor、chip、integrated circuit的基本差別</p></li> <li><p>邏輯晶片、記憶體、類比晶片等主要類型</p></li> </ul></div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>02</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>ASML. <em>The basics of microchips</em>.</strong> <a class="source-link" href="https://www.asml.com/en/technology/all-about-microchips/microchip-basics" rel="noopener noreferrer" target="_blank" title="https://www.asml.com/en/technology/all-about-microchips/microchip-basics">開啟原文 ↗</a></div>
+      <div class="reading-note"><p>理解矽、晶圓、電晶體與晶片</p> <ul> <li><p>矽如何製成晶圓</p></li> <li><p>晶圓與晶片的關係</p></li> <li><p>「奈米製程」大致代表什麼</p></li> </ul></div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>03</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>ASML. <em>How microchips are made</em>.</strong> <a class="source-link" href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" rel="noopener noreferrer" target="_blank" title="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made">開啟原文 ↗</a></div>
+      <div class="reading-note">認識晶片製造流程</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>04</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>老J（2026）。〈半導體產業全貌：從IDM到無廠半導體，徹底解說產業結構〉。<a class="source-link" href="https://jyforex.com/semiconductor-industry-structure-2026/" rel="noopener noreferrer" target="_blank" title="https://jyforex.com/semiconductor-industry-structure-2026/">開啟原文 ↗</a></strong></div>
+      <div class="reading-note">解析目前半導體供應鏈的重要角色供應商，IDM及Fabless的差別</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>05</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Taiwan Semiconductor Manufacturing Company. <em>Everything to know about dedicated foundries</em>.</strong> <a class="source-link" href="https://www.tsmc.com/english/aboutTSMC/dc_infographics_foundry" rel="noopener noreferrer" target="_blank" title="https://www.tsmc.com/english/aboutTSMC/dc_infographics_foundry">開啟原文 ↗</a></div>
+      <div class="reading-note">理解台積電晶圓代工商業模式</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>06</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Semiconductor Industry Association. (2025). <em>2025 SIA factbook</em>.</strong> <a class="source-link" href="https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL-1.pdf" rel="noopener noreferrer" target="_blank" title="https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL-1.pdf">開啟原文 ↗</a></div>
+      <div class="reading-note">包含市場規模、產品結構、研發支出、就業、區域市場與資本密集度，可了解產業數據。</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>07</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Semiconductor Industry Association. (2025). <em>2025 state of the U.S. semiconductor industry</em>.</strong> <a class="source-link" href="https://www.semiconductors.org/wp-content/uploads/2025/07/SIA-State-of-the-Industry-Report-2025.pdf" rel="noopener noreferrer" target="_blank" title="https://www.semiconductors.org/wp-content/uploads/2025/07/SIA-State-of-the-Industry-Report-2025.pdf">開啟原文 ↗</a></div>
+      <div class="reading-note">了解美國半導體政策、CHIPS Act、晶圓廠投資與供應鏈回流。</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>08</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Noor, R.,et al. (2023). <em>US microelectronics packaging ecosystem: Challenges and opportunities</em> <a class="source-link" href="https://doi.org/10.48550/arXiv.2310.11651" rel="noopener noreferrer" target="_blank" title="https://doi.org/10.48550/arXiv.2310.11651">開啟原文 ↗</a></strong></div>
+      <div class="reading-note"><p>系統整理 Chiplet、異</p> <p>整合、先進封裝與美國 OSAT／封裝供應鏈的瓶</p> <p>頸。</p></div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>09</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>PwC Taiwan.（2025）。《半導體產業趨勢報告：塑造半導體產業格局的趨勢與因素》。<a class="source-link" href="https://www.pwc.tw/zh/publications/topic-report/assets/state-of-the-semicon-industry.pdf" rel="noopener noreferrer" target="_blank" title="https://www.pwc.tw/zh/publications/topic-report/assets/state-of-the-semicon-industry.pdf">開啟原文 ↗</a></strong></div>
+      <div class="reading-note">本報告以淺顯易懂的方式介紹全球半導體產業的發展趨勢、供應鏈架構與關鍵技術。內容涵蓋 AI、HBM、車用半導體及台灣產業競爭力等議題，能快速建立完整知識框架。</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>10</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Taiwan Semiconductor Manufacturing Company. (2026). <em>2026 Technology Symposium highlights</em>.</strong> <a class="source-link" href="https://www.tsmc.com/english/symposium_highlights/2026" rel="noopener noreferrer" target="_blank" title="https://www.tsmc.com/english/symposium_highlights/2026">開啟原文 ↗</a></div>
+      <div class="reading-note">本論壇從 <strong>A13／A14 先進製程、奈米片電晶體，到 CoWoS、SoIC 與 3DFabric 先進封裝</strong>，呈現半導體技術已由單純追求電晶體微縮，轉向製程、封裝與系統整合的協同創新。</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>11</span><small>核心閱讀</small></div>
+      <div class="reading-source"><p><strong>張忠謀（2024）。《張忠謀自傳：上冊，一九三一——一九六四》。天下文化。</strong></p> <p><strong>張忠謀（2024）。《張忠謀自傳：下冊，一九六四——二〇一八》。天下文化。</strong></p></div>
+      <div class="reading-note">涵蓋張忠謀職涯、回台後的產業經驗，以及台積電創立與發展過程，是理解台積電決策者視角的重要第一手材料。</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>12</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Miller, C.（2023）。晶片戰爭：矽時代的新賽局，解析地緣政治下全球最關鍵科技的創新、商業模式與台灣的未來》（洪慧芳譯）。天下雜誌出版。</strong></div>
+      <div class="reading-note">本書以歷史敘事方式整理美國、日本、韓國、中國與台灣在半導體產業中的角色，兼顧技術、企業策略與國際政治</div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>13</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>太田泰彥（2022）。《半導體地緣政治學：解讀美中競合、台灣產業及全球供應鏈的未來》（卓惠娟譯）。野人文化。</strong></div>
+      <div class="reading-note"><p>以日本記者視角觀察全球供應鏈</p> <ul> <li><p>美國、中國、日本、韓國、台灣與歐洲的產業定位</p></li> </ul></div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>14</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>Hijink, M.（2025）。《造光者：晶片戰爭中最神祕的關鍵企業，微影巨人ASML制霸未來科技賽局的崛起之路》（洪慧芳譯）。天下雜誌。</strong></div>
+      <div class="reading-note"><ul> <li><p>剖析 ASML 在美中科技戰中，如何藉技術與專注成為關鍵戰略籌碼。</p></li> </ul></div>
+    </article>
+<article class="reading-card core">
+      <div class="reading-index"><span>15</span><small>核心閱讀</small></div>
+      <div class="reading-source"><strong>McGee, P.（2025）。《蘋果在中國：美國科技巨頭如何造就中國製造霸權》（鍾玉玨譯）。商業周刊。</strong></div>
+      <div class="reading-note"><ul> <li><p>探討蘋果在中國供應鏈的結構性風險，以及地緣政治下的轉型必要性。</p></li> <li><p>剖析2010-2020年間，台積電如何從代工廠躍升為具關鍵議價權的全球戰略支點。</p></li> </ul></div>
+    </article>
+<article class="reading-card extension">
+      <div class="reading-index"><span>EXT</span><small>延伸閱讀</small></div>
+      <div class="reading-source"><strong>蕭菊貞（導演）。（2025）。《造山者－世紀的賭注》［紀錄片］。財團法人蔣見美教授文教基金會、鴻梅文創志業股份有限公司、上善醫文化工作室、視納華仁文化傳播股份有限公司。</strong></div>
+      
+    </article>
+<article class="reading-card extension">
+      <div class="reading-index"><span>EXT</span><small>延伸閱讀</small></div>
+      <div class="reading-source"><strong>產業價值鏈資訊平台</strong></div>
+      <div class="reading-note"><a class="source-link" href="https://ic.tpex.org.tw/introduce.php?ic=D000&amp;stk_code=1410" rel="noopener noreferrer" target="_blank" title="https://ic.tpex.org.tw/introduce.php?ic=D000&amp;stk_code=1410">開啟網站 ↗</a></div>
+    </article></main>
+<footer class="footer"><span>115-1 半導體產業全球視野</span><span>Selectable text · Live links · Responsive HTML</span></footer><a class="to-top" href="#top" aria-label="回到頁首">↑</a>
+<script>const p=document.getElementById('progress');addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;p.style.width=(m>0?scrollY/m*100:0)+'%'});</script></body></html>
